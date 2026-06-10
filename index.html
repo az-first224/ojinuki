@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071c16">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="CPUまたは2人で遊べる推理カードゲーム「おじぬき」">
+  <title>おじぬき - Casino Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="casino-lights" aria-hidden="true"></div>
+
+  <main class="game-shell">
+    <header class="hero">
+      <div class="suit-line" aria-hidden="true">♠ <span>♦</span> ♣ <span>♥</span></div>
+      <p class="eyebrow">PRIVATE CASINO TABLE</p>
+      <h1>おじぬき</h1>
+      <p class="hero-copy">伏せられた一枚を読み切れ。</p>
+    </header>
+
+    <nav class="mode-switch" aria-label="対戦モード">
+      <button class="mode-button active" type="button" data-mode="cpu">CPU対戦</button>
+      <button class="mode-button" type="button" data-mode="two-player">2人対戦</button>
+    </nav>
+
+    <section class="scoreboard" aria-label="スコア">
+      <div class="score-card" id="player1-score-card">
+        <span class="player-chip" id="player1-chip">YOU</span>
+        <span class="score-name" id="player1-name">あなた</span>
+        <strong id="player1-score">0</strong>
+        <span class="score-unit">WIN</span>
+      </div>
+
+      <div class="round-panel">
+        <span>GAME</span>
+        <strong id="game-number">1</strong>
+      </div>
+
+      <div class="score-card" id="player2-score-card">
+        <span class="player-chip cpu-chip" id="player2-chip">CPU</span>
+        <span class="score-name" id="player2-name">ディーラー</span>
+        <strong id="player2-score">0</strong>
+        <span class="score-unit">WIN</span>
+      </div>
+    </section>
+
+    <section class="role-board" aria-label="現在の役割">
+      <div class="role-item attack-role">
+        <span class="role-label">ATTACK / 攻め</span>
+        <strong id="attacker-name">あなた</strong>
+      </div>
+      <div class="versus-chip" aria-hidden="true">VS</div>
+      <div class="role-item defense-role">
+        <span class="role-label">DEFENSE / 守り</span>
+        <strong id="defender-name">ディーラー</strong>
+      </div>
+    </section>
+
+    <div id="bonus-banner" class="bonus-banner hidden" role="status"></div>
+
+    <section class="game-board" aria-live="polite">
+      <div class="table-rim">
+        <div class="status-block">
+          <span class="step-label" id="step-label">DEAL</span>
+          <h2 id="status-title">ゲームを始めます</h2>
+          <p id="status-message">カードを配っています。</p>
+        </div>
+
+        <div id="play-area" class="play-area"></div>
+      </div>
+    </section>
+
+    <details class="rules">
+      <summary>RULE BOOK <span>遊び方と特殊ルール</span></summary>
+      <div class="rules-content">
+        <ol>
+          <li>守りがカードを1枚伏せます。</li>
+          <li>攻めが残りのカードから2枚引きます。</li>
+          <li>攻めは手札から、伏せられたカードを予想します。</li>
+          <li>当たれば攻め、外れれば守りの勝ちです。</li>
+        </ol>
+        <p><strong>JOKER：</strong>最初の2枚に含まれていれば、追加で1枚引けます。</p>
+        <p><strong>J BONUS：</strong>守りがJを隠して勝つと、そのプレイヤーが次に攻めるゲームではJが1枚減ります。</p>
+      </div>
+    </details>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
