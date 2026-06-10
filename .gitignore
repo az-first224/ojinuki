@@ -1,0 +1,12 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local deployment metadata
+.vercel/
+
+# Temporary browser test files
+.edge-test-profile*/
+*-check.png
