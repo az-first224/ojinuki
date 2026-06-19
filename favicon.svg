@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12382f"/>
+      <stop offset="0.55" stop-color="#061713"/>
+      <stop offset="1" stop-color="#020807"/>
+    </linearGradient>
+    <linearGradient id="card" x1="19" y1="8" x2="47" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#d8c9a8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <circle cx="48" cy="16" r="10" fill="#d7af5f" opacity="0.18"/>
+  <path d="M13 49c11 6 26 7 39 1" fill="none" stroke="#d7af5f" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+  <g transform="rotate(-10 32 32)" filter="url(#shadow)">
+    <rect x="18" y="8" width="28" height="48" rx="5" fill="url(#card)" stroke="#f8e9c0" stroke-width="1.4"/>
+    <rect x="21" y="11" width="22" height="42" rx="3" fill="none" stroke="#10231f" stroke-width="1.2" opacity="0.18"/>
+    <path d="M32 23c-5.8-6.2-14.2 1.4-7.2 8.8L32 39l7.2-7.2C46.2 24.4 37.8 16.8 32 23Z" fill="#b51f2e"/>
+    <text x="24.2" y="21.8" fill="#10231f" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="700">A</text>
+    <path d="M40 43c-2.7-2.9-6.6.6-3.3 4.1L40 50.4l3.3-3.3c3.3-3.5-.6-7-3.3-4.1Z" fill="#b51f2e"/>
+  </g>
+</svg>
